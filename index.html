@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Convert excel to JSON Object</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.2/xlsx.full.min.js"></script>
+</head>
+
+<body>
+    <div class="container" id="file-uploader">
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-3">
+                <input class="form-control" type="file" id="input" accept=".xls,.xlsx"  >
+            </div>
+            <div class="col-md-2">
+                <button class="btn btn-primary" id="button">Convert</button>
+            </div>
+            <div class="col-md-12">
+                <pre id="jsondata"></pre>
+            </div>
+        </div>
+    </div>
+    <div id="content">
+        <h1 class="header">Система за електронно обучение</h1>
+        <article id="options">
+            <section id="options-range" class="half" >
+                <button id="options-range-button" class="optBtns btn btn-primary" disabled>Find range of daily submissions</button>
+                <span class="upload-file-warn">Upload a file first.</span>
+                <article id="options-range-result">
+                    <h3 id="options-range-result-content"></h3>
+                </article>
+            </section>
+            <section id="options-deviation" class="half" >
+                <button id="options-deviation-button" class="optBtns btn btn-primary" disabled>Find trend in daily submissions</button>
+                <span class="upload-file-warn">Upload a file first.</span>
+                <article id="options-deviation-result">
+                    <h3 id="options-deviation-result-content">
+                    </h3>
+                </article>
+            </section>
+        </article>
+    </div>
+    <footer>
+        <ul id="footer-list">
+            <li class="footer-list-item">Teachers Information</li>
+            <li class="footer-list-item">Contacts</li>
+            <li class="footer-list-item">All of your courses</li>
+            <li class="footer-list-item">Help</li>
+        </ul>
+    </footer>
+</body>
+<script src="excel.js"></script>
+
+</html>
